@@ -16,7 +16,7 @@ class FacilityController extends Controller
 
         // Title for the page
         $title = [
-            'id' => 'Fasilitas Universitas Batam',
+            'id' => 'Fasilitas Karta Mulia',
             'en' => 'Batam University Facilities'
         ];
 

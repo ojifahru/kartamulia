@@ -1,2 +1,4 @@
 User-agent: *
-Disallow:
+Allow: /
+
+Sitemap: https://demoo.univbatam.ac.id/sitemap.xml

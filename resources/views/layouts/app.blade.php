@@ -16,11 +16,11 @@
 
     <meta name="robots" content="index, follow">
 
-    <meta name="description" content="{{ $identity->meta_description }}">
+    <meta name="description" content="{{ $identity->meta_description ?? 'Website resmi Karta Mulia.' }}">
 
-    <meta name="keywords" content="{{ $identity->meta_keywords }}">
+    <meta name="keywords" content="{{ $identity->meta_keywords ?? 'karta mulia, universitas, pendidikan' }}">
 
-    <meta name="author" content="uniba">
+    <meta name="author" content="Karta Mulia">
 
     <meta name="robots" content="all,index,follow">
 
@@ -31,7 +31,12 @@
     <meta NAME="Rating" CONTENT="General">
 
 
-    <link rel="shortcut icon" href="{{ asset('storage/' . $logo->favicon) }}" />
+    @php
+        $faviconPath = !empty($logo->favicon)
+            ? (str_starts_with($logo->favicon, 'images/') ? asset($logo->favicon) : asset('storage/' . $logo->favicon))
+            : asset('images/favicon.png');
+    @endphp
+    <link rel="shortcut icon" href="{{ $faviconPath }}" />
 
 
 

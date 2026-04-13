@@ -80,7 +80,7 @@
                     <!-- <li><a href="#" class="h-bg-twitter"><span class="ts-icon"><i class="fa-brands fa-twitter"></i></span><span class="ts-text">Twitter</span></a></li> -->
                     <li><a href="#" class="h-bg-instagram"><span class="ts-icon"><i
                                     class="fa-brands fa-instagram"></i></span><span
-                                class="ts-text">universitasbatam.uniba</span></a></li>
+                                class="ts-text">universitasbatam.Karta Mulia</span></a></li>
                     <li><a href="tel:+627787485055" class="h-bg-call"><span class="ts-icon"><i
                                     class="fa-solid fa-phone"></i></span><span class="ts-text">0778
                                 7485055</span></a></li>

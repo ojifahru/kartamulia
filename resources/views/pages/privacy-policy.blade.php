@@ -21,7 +21,7 @@
         </div>
     </section><!-- .page-title end -->
     <!-- Content
-          ============================================= -->
+                  ============================================= -->
     <section id="content">
         <div class="content-wrap">
             <div class="container">
@@ -63,13 +63,13 @@
                                     entitled to vote for election of directors or other managing authority.</p>
                             </li>
                             <li>
-                                <p><strong>Application</strong> refers to Uniba, the software program provided by the
+                                <p><strong>Application</strong> refers to Karta Mulia, the software program provided by the
                                     Company.</p>
                             </li>
                             <li>
                                 <p><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in
                                     this Agreement) refers
-                                    to Universitas Batam.</p>
+                                    to Karta Mulia.</p>
                             </li>
                             <li>
                                 <p><strong>Cookies</strong> are small files that are placed on Your computer, mobile device
@@ -109,7 +109,7 @@
                                     visit).</p>
                             </li>
                             <li>
-                                <p><strong>Website</strong> refers to Universitas Batam, accessible from <a
+                                <p><strong>Website</strong> refers to Karta Mulia, accessible from <a
                                         href="https://univbatam.ac.id" rel="external nofollow noopener"
                                         target="_blank">https://univbatam.ac.id</a></p>
                             </li>

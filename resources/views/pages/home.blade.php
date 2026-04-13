@@ -1,7 +1,7 @@
 {{-- filepath: c:\Users\ojifahru\Herd\univbatam\resources\views\pages\home.blade.php --}}
 @extends('layouts.app')
 
-@section('title', 'Universitas Batam - Home')
+@section('title', 'Karta Mulia - Home')
 @section('content')
     <!--====== SLIDER PART START ======-->
     <section id="slider" class="slider-element swiper_wrapper min-vh-60 min-vh-md-100" data-autoplay="7000" data-speed="650"
@@ -63,7 +63,7 @@
         </div>
 
         <div class="col-lg-4 d-md-none d-lg-block text-center">
-            <img src="{{ asset('storage/misi/Misi.jpg') }}" alt="Misi Universitas Batam">
+            <img src="{{ asset('storage/misi/Misi.jpg') }}" alt="Misi Karta Mulia">
         </div>
 
         <div class="col-lg-4 col-md-6">
@@ -147,7 +147,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-12 col-lg">
-                    <h3>Ayo segera menjadi bagian dari <span class="text-warning">Keluarga Besar</span> Universitas Batam!
+                    <h3>Ayo segera menjadi bagian dari <span class="text-warning">Keluarga Besar</span> Karta Mulia!
                     </h3>
                 </div>
                 <div class="col-12 col-lg-auto mt-4 mt-lg-0">

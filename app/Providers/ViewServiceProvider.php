@@ -28,13 +28,13 @@ class ViewServiceProvider extends ServiceProvider
     {
         // View composer untuk logo
         View::composer('*', function ($view) {
-            $logo = Logo::first();
+            $logo = Logo::first() ?? new Logo();
             $view->with('logo', $logo);
         });
 
         // View service untuk identity
         View::composer('*', function ($view) {
-            $identity = Identity::first();
+            $identity = Identity::first() ?? new Identity();
             $view->with('identity', $identity);
         });
 

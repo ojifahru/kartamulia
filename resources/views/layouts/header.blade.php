@@ -6,9 +6,14 @@
 
                         <div id="logo" class="order-lg-2 col-auto px-0 me-lg-0">
                             <!-- Logo -->
+                            @php
+                                $logoPath = !empty($logo->logo)
+                                    ? (str_starts_with($logo->logo, 'images/') ? asset($logo->logo) : asset('storage/' . $logo->logo))
+                                    : asset('images/logo.png');
+                            @endphp
                             <a href="{{ route('home') }}" class="logo text-decoration-none">
                                 <img class="logo-default"  height="73"
-                                    src="{{ asset('storage/' . $logo['logo']) }}" alt="Logo-Universitas-Batam">
+                                    src="{{ $logoPath }}" alt="Logo Karta Mulia">
                             </a>
                         </div>
                         <!-- #logo end -->

@@ -15,7 +15,7 @@ class ProfileController extends Controller
 
         // Title for the page
         $title = [
-            'id' => 'Profil Universitas Batam',
+            'id' => 'Profil Karta Mulia',
             'en' => 'Batam University Profile'
         ];
 

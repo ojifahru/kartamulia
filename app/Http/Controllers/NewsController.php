@@ -17,7 +17,7 @@ class NewsController extends Controller
             ->paginate(10);
 
         $title = [
-            'id' => 'Berita Universitas Batam',
+            'id' => 'Berita Karta Mulia',
             'en' => 'Batam University News'
         ];
 

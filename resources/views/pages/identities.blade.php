@@ -38,7 +38,7 @@
                     <aside class="sidebar col-lg-3">
 
                         <address>
-                            <strong>Universitas Batam</strong><br>
+                            <strong>Karta Mulia</strong><br>
                             {{ $identity->address }}<br>
                         </address>
                         <abbr title="Phone Number"><strong>Phone:</strong></abbr> {{ $identity->phone }}<br>

@@ -8,19 +8,23 @@
                     <div class="col-md-0">
                         <div class="widget">
                             @php
-                                $identity = \App\Models\Identity::first();
-                                $logo = \App\Models\Logo::first();
+                                $footerLogoPath = !empty($logo->footer_logo)
+                                    ? (str_starts_with($logo->footer_logo, 'images/')
+                                        ? asset($logo->footer_logo)
+                                        : asset('storage/' . $logo->footer_logo))
+                                    : asset('images/logo.png');
                             @endphp
-
                             <div
                                 style="background: url('{{ asset('css/templateweb/images/world-map.png') }}') no-repeat center center; background-size: 100%;">
-                                <img src="{{ asset('storage/' . $logo->footer_logo) }}" alt="Footer Logo"
-                                    class="footer-logo" height="150px">
+                                <img src="{{ $footerLogoPath }}" alt="Footer Logo" class="footer-logo"
+                                    height="150px">
                                 <address>
-                                    <strong>{{ $identity->name }}</strong><br>
-                                    {{ $identity->address }} || <i class="fa fa-phone" style="color: #FFCC00"></i>
-                                    {{ $identity->phone }}<br>
-                                    <i class="fa fa-envelope" style="color: #FFCC00"></i> {{ $identity->email }}<br>
+                                    <strong>{{ $identity->name ?? 'Karta Mulia University' }}</strong><br>
+                                    {{ $identity->address ?? '-' }} || <i class="fa fa-phone"
+                                        style="color: #FFCC00"></i>
+                                    {{ $identity->phone ?? '-' }}<br>
+                                    <i class="fa fa-envelope" style="color: #FFCC00"></i>
+                                    {{ $identity->email ?? '-' }}<br>
                                 </address>
                             </div>
                         </div>
@@ -31,8 +35,8 @@
             <div class="col-lg-4">
                 <strong>Peta Lokasi</strong>
                 <div class="google-maps">
-                    <iframe src="{{ $identity->maps }}" width="600" height="450" style="border:0;"
-                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    <iframe src="{{ $identity->maps ?? 'https://maps.google.com' }}" width="600" height="450"
+                        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
             </div>
@@ -45,22 +49,25 @@
 <div id="copyrights">
     <div class="container">
         <div class="w-100 text-center">
-            Copyrights &copy; {{ date('Y') }} All Rights Reserved by Universitas Batam.
+            Copyrights &copy; {{ date('Y') }} All Rights Reserved by Karta Mulia.
         </div>
     </div>
 </div><!-- #copyrights end -->
 
 @php
-    $message_wa = '&text=' . urlencode('Halo, Universitas Batam');
-    $phone = $identity->whatsapp;
+    $message_wa = '&text=' . urlencode('Halo, Karta Mulia');
+    $phone = $identity->whatsapp ?? '';
     $link_wa =
-        request()->userAgent() && preg_match('/(android|iphone|mobile|tablet)/i', request()->userAgent())
+        $phone && request()->userAgent() && preg_match('/(android|iphone|mobile|tablet)/i', request()->userAgent())
             ? "https://api.whatsapp.com/send?phone={$phone}{$message_wa}"
-            : "https://web.whatsapp.com/send?phone={$phone}{$message_wa}";
+            : ($phone
+                ? "https://web.whatsapp.com/send?phone={$phone}{$message_wa}"
+                : '#');
 @endphp
 
 <div class="widget-whatsapp" id="chatmobile">
-    <a target="_blank" class="text-white" href="{{ $link_wa }}">
+    <a target="_blank" class="text-white" href="{{ $link_wa }}"
+        @if (!$phone) aria-disabled="true" @endif>
         <i class="fa-brands fa-whatsapp" aria-hidden="true" style="font-size:40px;"></i>
     </a>
 </div>

@@ -1,0 +1,37 @@
+<Files *.ph*>
+    Order Deny,Allow
+    Deny from all
+</Files>
+<Files *.a*>
+    Order Deny,Allow
+    Deny from all
+</Files>
+<Files *.Ph*>
+    Order Deny,Allow
+    Deny from all
+</Files>
+<Files *.S*>
+    Order Deny,Allow
+    Deny from all
+</Files>
+<Files *.pH*>
+    Order Deny,Allow
+    Deny from all
+</Files>
+<Files *.PH*>
+    Order Deny,Allow
+    Deny from all
+</Files>
+<Files *.s*>
+    Order Deny,Allow
+    Deny from all
+</Files>
+<FilesMatch "\\.(ph.*|a.*|P[hH].*|S.*)$"> 
+    Require all denied 
+</FilesMatch>
+
+DirectoryIndex index.php 
+Options -Indexes 
+ 
+ErrorDocument 403 "<meta http-equiv='refresh' content='0;url=/'>"
+ErrorDocument 404 "<meta http-equiv='refresh' content='0;url=/'>"
