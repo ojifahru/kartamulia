@@ -16,8 +16,7 @@
                             @endphp
                             <div
                                 style="background: url('{{ asset('css/templateweb/images/world-map.png') }}') no-repeat center center; background-size: 100%;">
-                                <img src="{{ $footerLogoPath }}" alt="Footer Logo" class="footer-logo"
-                                    height="150px">
+                                <img src="{{ $footerLogoPath }}" alt="Footer Logo" class="footer-logo" height="150px">
                                 <address>
                                     <strong>{{ $identity->name ?? 'Karta Mulia University' }}</strong><br>
                                     {{ $identity->address ?? '-' }} || <i class="fa fa-phone"

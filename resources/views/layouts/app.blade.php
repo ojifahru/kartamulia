@@ -33,7 +33,9 @@
 
     @php
         $faviconPath = !empty($logo->favicon)
-            ? (str_starts_with($logo->favicon, 'images/') ? asset($logo->favicon) : asset('storage/' . $logo->favicon))
+            ? (str_starts_with($logo->favicon, 'images/')
+                ? asset($logo->favicon)
+                : asset('storage/' . $logo->favicon))
             : asset('images/favicon.png');
     @endphp
     <link rel="shortcut icon" href="{{ $faviconPath }}" />
